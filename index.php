@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/index.css">
     
     <!-- JavaSript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/ace/1.2.1/min/ace.js" type="text/javascript" charset="utf-8"></script>
+    
 </head>
 <body>
     
@@ -18,25 +20,20 @@
             <?php
                 $dir = './';
                 $files = scandir($dir);
-                
+
                 foreach ($files as $value) { 
                     
                         if(is_dir($value)){
-                            echo '<b>'.$value.'</b><br>'; 
+                            echo '<b data-url="'.$value.'">'.$value.'</b><br>'; 
                         }else{
-                            echo $value.'<br>';
+                            echo '<span data-url="'.$value.'">'.$value.'</span><br>';
                         }
                 }
                 
             ?>
             
         </div>
-        <div id="editor"><?php
-            
-            $source = fopen("js/index.js", "r");
-            echo fread($source,filesize("js/index.js"));
-            
-        ?></div>
+        <div id="editor">//Clique em um arquivo ao lado</div>
     </div>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
