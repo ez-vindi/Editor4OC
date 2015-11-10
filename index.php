@@ -23,17 +23,18 @@
 
                 foreach ($files as $value) { 
                     
-                        if(is_dir($value)){
-                            echo '<b data-url="'.$value.'">'.$value.'</b><br>'; 
-                        }else{
-                            echo '<span data-url="'.$value.'">'.$value.'</span><br>';
-                        }
+                    if(is_dir($value)){
+                        echo '<b data-url="'.$value.'">'.$value.'</b><br>'; 
+                    }else{
+                        echo '<span data-url="'.$value.'">'.$value.'</span><br>';
+                    }
                 }
                 
             ?>
             
         </div>
         <div id="editor">//Clique em um arquivo ao lado</div>
+        <button class="save-button">Salvar</button>
     </div>
     <script type="text/javascript" src="js/index.js"></script>
 </body>

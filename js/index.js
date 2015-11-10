@@ -11,11 +11,19 @@ $('#treeview span').click(function(){
         data: {
             caminho: $(this).data('url')
         },
-        
-        // Work with the response
         success: function( response ) {
             console.log(response);
             editor.setValue(response);
         }
     });
+    
+    var extension = $(this).data('url')
+    extension = extension.split(".");
+    extension = extension[extension.length-1];
+    console.log('A extensao é '+extension)
+    editor.getSession().setMode("ace/mode/"+extension);
 });
+
+$('.save-button').click(function(){
+    
+})

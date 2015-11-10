@@ -32,3 +32,25 @@ html, body{
     bottom: 0;
     left: 300px;
 }
+
+.save-button{
+    z-index: 10;
+    position: fixed;
+    display: block;
+    width: 80px;
+    height: 40px;
+    background-color: #0A8400;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border: 0;
+    color: #fff;
+    font-weight: 700;
+    left: 350px;
+    bottom: 10px;
+    outline: none;
+}
+
+.save-button:hover{
+    background: #0FCA00;
+}
