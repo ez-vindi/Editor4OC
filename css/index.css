@@ -40,9 +40,9 @@ html, body{
     width: 80px;
     height: 40px;
     background-color: #0A8400;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     border: 0;
     color: #fff;
     font-weight: 700;
@@ -53,4 +53,9 @@ html, body{
 
 .save-button:hover{
     background: #0FCA00;
+}
+
+.save-button:disabled{
+    background: #888;
+    color: #666;
 }
