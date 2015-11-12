@@ -21,21 +21,18 @@
         <div id="treeview">
             
             <?php
-            
-                function listDir($dir){
+                
+                $dir = './lojas/123456/';
+                
+                if (is_dir($dir)) {
                     if ($dh = opendir($dir)) {
                         while (($file = readdir($dh)) !== false) {
                             
                             if($file != '.' && $file != '..'){
                                 if(filetype($dir . $file) == 'dir'){
-                                    echo '<b data-url="'.$dir.$file.'"> #'.$file.'</b><br>';
-                                    
-                                    echo '<div class="sub">';
-                                        listDir($dir.$file.'/');
-                                    echo '</div>';
-                                    
+                                    echo '<b data-url="./lojas/123456/'.$file.'">'.$file.'</b><br>'; 
                                 }else if(filetype($dir . $file) == 'file'){
-                                    echo '<span data-url="'.$dir.$file.'">'.$file.'</span><br>';
+                                    echo '<span data-url="./lojas/123456/'.$file.'">'.$file.'</span><br>';
                                 }else{
                                     echo '<br>error<br>';
                                 }
@@ -43,12 +40,6 @@
                         }
                         closedir($dh);
                     }
-                }
-                
-                $dir = './lojas/123456/';
-                
-                if (is_dir($dir)) {
-                    listDir($dir.$file.'/');
                 }
                 
                 clearstatcache(); 

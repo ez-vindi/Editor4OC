@@ -22,6 +22,12 @@ html, body{
     bottom: 0;
     width: 300px;
     background: #ccc;    
+    overflow: auto;
+}
+
+#treeview .sub{
+    margin-left: 15px;
+    background-color: #bcbcbc;
 }
 
 #editor{
