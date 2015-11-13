@@ -1,3 +1,17 @@
+function changeExtension(ext){
+  
+    var lstExt = [];
+    
+    var arr = [ "javascript", "markdown" ];
+    
+    if(jQuery.inArray( ext, arr ) >= 0){
+        lstExt['js'] = "javascript";
+        lstExt['md'] = "markdown";
+    }
+    
+    return lstExt[ext];
+}
+
 /*global ace */
 var editor = ace.edit("editor");
 editor.setTheme("ace/theme/monokai");
@@ -21,7 +35,7 @@ $('#treeview span').click(function(){
     extension = extension.split(".");
     extension = extension[extension.length-1];
     console.log('A extensao é '+extension)
-    editor.getSession().setMode("ace/mode/"+extension);
+    editor.getSession().setMode("ace/mode/"+changeExtension(extension));
     $('body').attr('data-url', $(this).data('url'));
     
 });

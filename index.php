@@ -28,14 +28,14 @@
                             
                             if($file != '.' && $file != '..'){
                                 if(filetype($dir . $file) == 'dir'){
-                                    echo '<b data-url="'.$dir.$file.'"> #'.$file.'</b><br>';
+                                    echo '<br><b data-url="'.$dir.$file.'"> #'.$file.'</b> <a class="new-file">Novo arquivo</a><br>';
                                     
                                     echo '<div class="sub">';
                                         listDir($dir.$file.'/');
                                     echo '</div>';
                                     
                                 }else if(filetype($dir . $file) == 'file'){
-                                    echo '<span data-url="'.$dir.$file.'">'.$file.'</span><br>';
+                                    echo '<span class="file" data-url="'.$dir.$file.'">'.$file.'</span><a class="file-link link-rename">Renomear</a><a class="file-link link-delete">Excluir</a><br>';
                                 }else{
                                     echo '<br>error<br>';
                                 }

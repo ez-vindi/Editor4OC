@@ -30,6 +30,37 @@ html, body{
     background-color: #bcbcbc;
 }
 
+#treeview .new-file{
+    color: #4E4E4E;
+    background-color: #A7A7A7;
+}
+
+#treeview .new-file:hover{
+    cursor: pointer;
+}
+
+#treeview .file{
+    cursor: pointer;
+}
+
+#treeview .file-link{
+    margin: 0 4px;
+}
+
+#treeview .file-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#treeview .link-rename{
+    color: #0036D6;
+}
+
+#treeview .link-delete{
+    color: #F92626;    
+}
+
+
 #editor{
     position: absolute;
     display: block;
